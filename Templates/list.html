@@ -1,0 +1,10 @@
+{% extends 'blank_layout.html' %}
+{% load static %}
+{% block content %}
+<h1> list movies</h1>
+{% for movie_obj in movies %}
+<h3>title : {{movie_obj.title | upper}}</h3>
+<img src ="{% static 'images/'%}{{ movie_obj.img }}"
+<h6> year : {{movie_obj.year}}</h6>
+{% endfor %}
+{% endblock content%}
